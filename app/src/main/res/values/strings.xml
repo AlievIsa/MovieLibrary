@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Movie Library</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="reviews">Reviews</string>
+    <string name="popular">Popular</string>
+    <string name="type_movie_name">Type movie name</string>
+    <string name="movies_not_found">Movies not found</string>
+    <string name="action">Action</string>
+    <string name="adventure">Adventure</string>
+</resources>
