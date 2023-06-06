@@ -3,9 +3,35 @@
     <string name="home">Home</string>
     <string name="search">Search</string>
     <string name="reviews">Reviews</string>
+    <string name="greetings">Welcome back!</string>
+    <string name="log_in_to_continue">Log In to continue</string>
+    <string name="log_in">Log In</string>
+    <string name="name">Name</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="add_avatar">Add avatar</string>
+    <string name="email_error">Enter email</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="password_error">Enter password</string>
+    <string name="password_length_error"><![CDATA[Password length should be > 5 and < 24]]></string>
+    <string name="password_invalid_characters_error">
+    <![CDATA[Password should only contain letters a–z, A–Z, digits 0–9, and special symbols @#$%^&+=]]>
+    </string>
+    <string name="user_not_found">User not found</string>
+    <string name="answer_error">Failed to get answer</string>
+    <string name="log_in_failed">Log in failed</string>
+    <string name="sign_up_success">Sign Up success!</string>
+    <string name="avatar_error">Please, choose avatar</string>
+    <string name="confirm_password_error">Password does not match</string>
+    <string name="name_error">Enter name</string>
+    <string name="name_too_long"><![CDATA[Name length should be < 30]]></string>
     <string name="popular">Popular</string>
     <string name="type_movie_name">Type movie name</string>
     <string name="movies_not_found">Movies not found</string>
     <string name="action">Action</string>
     <string name="adventure">Adventure</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

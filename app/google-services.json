@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "641378172501",
+    "project_id": "movie-library-d2620",
+    "storage_bucket": "movie-library-d2620.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641378172501:android:f37b9dd5bfbc8b6f095edc",
+        "android_client_info": {
+          "package_name": "com.example.movielibrary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641378172501-f4m45tf8piejpfv9e5515blg0r41j3cg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAASnbrQHW5Flp-MkzCc9YMXEW4OFv5oW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641378172501-f4m45tf8piejpfv9e5515blg0r41j3cg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
