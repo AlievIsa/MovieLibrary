@@ -54,5 +54,8 @@ class HomeFragment : Fragment() {
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             activity?.startActivity(intent)
         }
+        binding.addMovie.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_movieAddFragment)
+        }
     }
 }

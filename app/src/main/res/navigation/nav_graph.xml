@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.example.movielibrary.fragments.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_movieAddFragment"
+            app:destination="@id/movieAddFragment" />
+    </fragment>
     <fragment
         android:id="@+id/reviewsFragment"
         android:name="com.example.movielibrary.fragments.ReviewsFragment"
@@ -20,4 +24,9 @@
         android:name="com.example.movielibrary.fragments.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
+    <dialog
+        android:id="@+id/movieAddFragment"
+        android:name="com.example.movielibrary.fragments.MovieAddFragment"
+        android:label="fragment_movie_add"
+        tools:layout="@layout/fragment_movie_add" />
 </navigation>

@@ -37,7 +37,17 @@
     <string name="thriller">Триллеры</string>
     <string name="drama">Драма</string>
     <string name="horror">Ужасы</string>
-    <string name="movies_by_category">Фильмы по категориям</string>
+    <string name="movies_by_category">Фильмы по жанрам</string>
     <string name="user">(Пользователь)</string>
     <string name="admin">(Администратор)</string>
+    <string name="add_movie_n_poster">Добавьте\nпостер\nфильма</string>
+    <string name="enter_movie_name">Введите название фильма</string>
+    <string name="movie_rate">Оценка фильма:</string>
+    <string name="rate">0.0</string>
+    <string name="enter_movie_description">Введите описание фильма</string>
+    <string name="add">Добавить</string>
+    <string name="genre">Жанр:</string>
+    <string name="add_movie_to_database">Добавление фильма в базу данных</string>
+    <string name="release_year">Год выхода:</string>
+    <string name="year">Год</string>
 </resources>

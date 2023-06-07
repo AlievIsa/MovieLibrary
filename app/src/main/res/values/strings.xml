@@ -40,4 +40,14 @@
     <string name="movies_by_category">Movies by category</string>
     <string name="user">(User)</string>
     <string name="admin">(Admin)</string>
+    <string name="add_movie_n_poster">Add\nmovie\nposter</string>
+    <string name="enter_movie_name">Enter movie name</string>
+    <string name="movie_rate">Movie rate:</string>
+    <string name="rate">0.0</string>
+    <string name="enter_movie_description">Enter movie description</string>
+    <string name="add">Add</string>
+    <string name="genre">Genre:</string>
+    <string name="add_movie_to_database">Adding movie to database</string>
+    <string name="release_year">Release year:</string>
+    <string name="year">Year</string>
 </resources>
