@@ -1,7 +1,9 @@
 package com.example.movielibrary.activities
 
+import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -27,6 +29,16 @@ class MainActivity : AppCompatActivity() {
 
         navController = navHostFragment.navController
         // Устанавливаем BottomNavigationView для NavController
+        navController.addOnDestinationChangedListener{ _, destination, _ ->
+            when(destination.id) {
+                R.id.movieFragment -> {
+                    bottomNavigationView.visibility = View.GONE
+                }
+                else ->
+                    bottomNavigationView.visibility = View.VISIBLE
+            }
+        }
+
         bottomNavigationView.setupWithNavController(navController)
     }
 }

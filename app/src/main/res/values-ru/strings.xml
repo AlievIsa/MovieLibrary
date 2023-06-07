@@ -50,4 +50,6 @@
     <string name="add_movie_to_database">Добавление фильма в базу данных</string>
     <string name="release_year">Год выхода:</string>
     <string name="year">Год</string>
+    <string name="description">Описание</string>
+    <string name="add_review">Добавить отзыв</string>
 </resources>

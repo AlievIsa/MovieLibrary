@@ -1,10 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.MovieFragment">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:liftOnScroll="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/movieToolbar"
+            style="@style/Widget.Material3.Toolbar.Surface"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="4dp"
+            app:navigationIcon="@drawable/round_arrow_back_24"
+            app:navigationIconTint="?attr/colorOnSurface">
 
-</FrameLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/moviePoster"
+                android:layout_width="160dp"
+                android:layout_height="260dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:paddingBottom="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/avengers_poster" />
+
+            <TextView
+                android:id="@+id/movieName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="200dp"
+                android:text="Мстители: Финал"
+                android:textStyle="bold"
+                android:layout_marginStart="24dp"
+                app:layout_constraintTop_toTopOf="@id/moviePoster"
+                app:layout_constraintStart_toEndOf="@id/moviePoster"/>
+
+            <TextView
+                android:id="@+id/movieReleaseYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Год выпуска: 2019"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@id/movieName"
+                app:layout_constraintTop_toBottomOf="@id/movieName"/>
+
+            <TextView
+                android:id="@+id/movieGenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Жанр: Фантастика"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@id/movieName"
+                app:layout_constraintTop_toBottomOf="@id/movieReleaseYear"/>
+
+            <TextView
+                android:id="@+id/movieRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Оценка на кинопоиcке: 8.0"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@id/movieName"
+                app:layout_constraintTop_toBottomOf="@id/movieGenre"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/descriptionBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainBlock"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/descriptionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="28dp"
+                android:paddingBottom="16dp"
+                android:justificationMode="inter_word"
+                android:text="Оставшиеся в живых члены команды Мстителей и их союзники должны разработать новый план, который поможет противостоять разрушительным действиям могущественного титана Таноса. После наиболее масштабной и трагической битвы в истории они не могут допустить ошибку."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addReviewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_review"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/descriptionBlock"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
