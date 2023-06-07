@@ -10,10 +10,10 @@ package com.example.movielibrary.models
  * @param movieGenre - жанр фильма
  */
 data class Movie (
-    val movieName: String = "",
-    val movieRate: String = "",
-    val moviePoster: String = "",
-    val movieDescription: String = "",
-    val movieGenre: String = "",
-    val movieReleaseYear: String = ""
+    val name: String = "",
+    val rate: String = "",
+    val poster: String = "",
+    val description: String = "",
+    val genre: String = "",
+    val releaseYear: String = ""
 )

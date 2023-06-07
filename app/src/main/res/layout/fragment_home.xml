@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/chatToolbar"
+            android:id="@+id/homeToolbar"
             style="@style/Widget.Material3.Toolbar.Surface"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
@@ -39,7 +39,13 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,49 +53,95 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/popularTextView"
+                android:id="@+id/fantasyGenreTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginVertical="4dp"
+                android:layout_marginStart="16dp"
                 android:text="@string/fantasy"
-                android:textSize="24sp"
-                android:textStyle="italic"/>
+                android:textSize="20sp"
+                android:textStyle="italic" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/popularRecyclerView"
+                android:id="@+id/fantasyRecyclerView"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" />
+                android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/actionTextView"
+                android:id="@+id/actionGenreTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginVertical="4dp"
+                android:layout_marginStart="16dp"
                 android:text="@string/action"
-                android:textSize="24sp"
-                android:textStyle="italic"/>
+                android:textSize="20sp"
+                android:textStyle="italic" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/actionRecyclerView"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" />
+                android:layout_height="wrap_content"/>
 
             <TextView
-                android:id="@+id/adventureTextView"
+                android:id="@+id/adventureGenreTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginVertical="4dp"
+                android:layout_marginStart="16dp"
                 android:text="@string/adventure"
-                android:textSize="24sp"
-                android:textStyle="italic"/>
+                android:textSize="20sp"
+                android:textStyle="italic" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/adventureRecyclerView"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/thrillerGenreTextView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" />
+                android:layout_marginVertical="4dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/thriller"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/thrillerRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/dramaGenreTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/drama"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dramaRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/horrorGenreTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/horror"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/horrorRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
         </LinearLayout>
     </ScrollView>
 

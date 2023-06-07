@@ -18,3 +18,11 @@ const val KEY_MOVIE_RATE = "rate"
 const val KEY_MOVIE_POSTER = "poster"
 const val KEY_MOVIE_DESCRIPTION = "description"
 const val KEY_MOVIE_RELEASE_YEAR = "release_year"
+
+// genres
+const val KEY_FANTASY = "Фантастика"
+const val KEY_ACTION = "Боевики"
+const val KEY_ADVENTURE = "Приключения"
+const val KEY_THRILLERS = "Триллеры"
+const val KEY_DRAMA = "Драма"
+const val KEY_HORRORS = "Ужасы"

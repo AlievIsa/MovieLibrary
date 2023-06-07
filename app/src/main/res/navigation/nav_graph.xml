@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_movieAddFragment"
             app:destination="@id/movieAddFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
     </fragment>
     <fragment
         android:id="@+id/reviewsFragment"
@@ -29,4 +32,13 @@
         android:name="com.example.movielibrary.fragments.MovieAddFragment"
         android:label="fragment_movie_add"
         tools:layout="@layout/fragment_movie_add" />
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.example.movielibrary.fragments.MovieFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movie" >
+        <argument
+            android:name="movieName"
+            app:argType="string" />
+    </fragment>
 </navigation>
