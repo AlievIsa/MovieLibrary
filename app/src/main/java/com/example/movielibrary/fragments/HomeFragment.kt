@@ -56,6 +56,7 @@ class HomeFragment : Fragment() {
                 binding.addMovie.visibility = View.GONE
         }
         setListeners()
+        initRecyclerViews()
     }
 
     private fun setListeners() {
@@ -70,8 +71,6 @@ class HomeFragment : Fragment() {
         binding.addMovie.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_movieAddFragment)
         }
-
-        initRecyclerViews()
     }
 
     private fun initRecyclerViews() {
