@@ -21,7 +21,11 @@
         android:id="@+id/reviewsFragment"
         android:name="com.example.movielibrary.fragments.ReviewsFragment"
         android:label="fragment_reviews"
-        tools:layout="@layout/fragment_reviews" />
+        tools:layout="@layout/fragment_reviews" >
+        <action
+            android:id="@+id/action_reviewsFragment_to_openedReviewFragment"
+            app:destination="@id/openedReviewFragment" />
+    </fragment>
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.movielibrary.fragments.SearchFragment"
@@ -44,5 +48,26 @@
         <argument
             android:name="movieName"
             app:argType="string" />
+        <action
+            android:id="@+id/action_movieFragment_to_reviewAddFragment"
+            app:destination="@id/reviewAddFragment" />
     </fragment>
+    <dialog
+        android:id="@+id/reviewAddFragment"
+        android:name="com.example.movielibrary.fragments.ReviewAddFragment"
+        android:label="fragment_review_add"
+        tools:layout="@layout/fragment_review_add" >
+        <argument
+            android:name="movieName"
+            app:argType="string" />
+    </dialog>
+    <dialog
+        android:id="@+id/openedReviewFragment"
+        android:name="com.example.movielibrary.fragments.OpenedReviewFragment"
+        android:label="fragment_opened_review"
+        tools:layout="@layout/fragment_opened_review" >
+        <argument
+            android:name="reviewId"
+            app:argType="integer" />
+    </dialog>
 </navigation>

@@ -4,19 +4,14 @@ import android.app.Activity
 import android.app.Dialog
 import android.content.Intent
 import android.net.Uri
-import android.os.Binder
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
-import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
 import com.example.movielibrary.R
@@ -28,17 +23,27 @@ import com.example.movielibrary.data.KEY_MOVIE_POSTER
 import com.example.movielibrary.data.KEY_MOVIE_RATE
 import com.example.movielibrary.data.KEY_MOVIE_RELEASE_YEAR
 import com.example.movielibrary.databinding.FragmentMovieAddBinding
-import com.example.movielibrary.models.Movie
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 
+/**
+ * Movie add fragment
+ * Этот фрагмент используется для добавления фильма в базу данных администратором.
+ * @constructor создает пустой фрагмент пользователя
+ */
 class MovieAddFragment : DialogFragment() {
 
     private lateinit var binding: FragmentMovieAddBinding
     private lateinit var moviePosterUri: Uri
     private var db = Firebase.firestore
 
+    /**
+     * On create dialog
+     * Этот метод создает собственный пользовательский диалоговый контейнер
+     * @param savedInstanceState - объект, необходимый для сохранения состояний
+     * @return новый экземпляр диалогового окна, который будет отображаться фрагментом.
+     */
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val builder = AlertDialog.Builder(requireContext(), R.style.TransparentDialog)
         binding = FragmentMovieAddBinding.inflate(layoutInflater)
@@ -109,7 +114,16 @@ class MovieAddFragment : DialogFragment() {
         return builder.create()
     }
 
-
+    /**
+     * Add movie
+     * Данный метод создает в базе данных фильм по соответствующим аргументам
+     * @param name - название фильма
+     * @param rate - оценка фильма
+     * @param poster - постер фильма
+     * @param description - описание фильма
+     * @param genre - жанр фильма
+     * @param releaseYear - год выхода фильма
+     */
     private fun addMovie(
         name: String,
         rate: String,

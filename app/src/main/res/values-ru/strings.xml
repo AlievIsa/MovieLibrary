@@ -52,4 +52,11 @@
     <string name="year">Год</string>
     <string name="description">Описание</string>
     <string name="add_review">Добавить отзыв</string>
+    <string name="your_reviews">Ваши отзывы</string>
+    <string name="your_review">Ваш отзыв</string>
+    <string name="save">Сохранить</string>
+    <string name="review_added">Отзыв добавлен</string>
+    <string name="delete">Удалить</string>
+    <string name="review_changed">Отзыв изменен</string>
+    <string name="review_deleted">Отзыв удален</string>
 </resources>

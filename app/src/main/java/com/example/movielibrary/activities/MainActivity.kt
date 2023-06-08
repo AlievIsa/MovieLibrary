@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         // Устанавливаем BottomNavigationView для NavController
         navController.addOnDestinationChangedListener{ _, destination, _ ->
             when(destination.id) {
-                R.id.movieFragment -> {
+                R.id.movieFragment, R.id.reviewAddFragment -> {
                     bottomNavigationView.visibility = View.GONE
                 }
                 else ->

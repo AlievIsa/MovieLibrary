@@ -52,4 +52,11 @@
     <string name="year">Year</string>
     <string name="description">Description</string>
     <string name="add_review">Add review</string>
+    <string name="your_reviews">Your reviews</string>
+    <string name="your_review">Your review</string>
+    <string name="save">Save</string>
+    <string name="review_added">Review added</string>
+    <string name="delete">Delete</string>
+    <string name="review_changed">Review changed</string>
+    <string name="review_deleted">Review deleted</string>
 </resources>

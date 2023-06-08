@@ -29,10 +29,23 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 
+/**
+ * Home fragment
+ * Этот фрагмент используется для отображения чатов.
+ * @constructor создает пустой фрагмент чатов
+ */
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private val db = Firebase.firestore
+
+    /**
+     * On create view
+     * Этот метод устанавливает представление фрагмента
+     * @param inflater - объект, который раздувает все элементы view на фрагменте
+     * @param savedInstanceState - объект, необходимый для сохранения состояний
+     * @return возвращает созданное представление
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,6 +54,12 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    /**
+     * On view created
+     * Этот метод вызывается сразу после установки представления
+     * @param view - представление полученное из метода onCreateView
+     * @param savedInstanceState - объект, необходимый для сохранения состояний
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val user = UserManager.currentUser
@@ -59,6 +78,10 @@ class HomeFragment : Fragment() {
         initRecyclerViews()
     }
 
+    /**
+     * Set listeners
+     * Этот метод обрабатывает нажатия на элементы фрагмента
+     */
     private fun setListeners() {
         binding.homeToolbar.setNavigationOnClickListener {
             val sharedPreferences =
@@ -73,6 +96,10 @@ class HomeFragment : Fragment() {
         }
     }
 
+    /**
+     * Init recycler view
+     * Этот метод инициализирует основное представление объектов RecyclerView распределенных по жанрам.
+     */
     private fun initRecyclerViews() {
         val fantasyQuery = db.collection(KEY_COLLECTION_MOVIES)
             .whereEqualTo(KEY_MOVIE_GENRE, KEY_FANTASY)

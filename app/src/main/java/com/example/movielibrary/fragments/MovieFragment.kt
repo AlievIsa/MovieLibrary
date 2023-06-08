@@ -1,13 +1,10 @@
 package com.example.movielibrary.fragments
 
-import android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD
-import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.RequiresApi
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
@@ -23,13 +20,24 @@ import com.example.movielibrary.databinding.FragmentMovieBinding
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-
+/**
+ * Movie fragment
+ * Этот фрагмент используется для отображения страницы фильма.
+ * @constructor создает пустой фрагмент чатов
+ */
 class MovieFragment : Fragment() {
 
     private lateinit var binding: FragmentMovieBinding
     private val db = Firebase.firestore
     private val args: MovieFragmentArgs by navArgs()
 
+    /**
+     * On create view
+     * Этот метод устанавливает представление фрагмента
+     * @param inflater - объект, который раздувает все элементы view на фрагменте
+     * @param savedInstanceState - объект, необходимый для сохранения состояний
+     * @return возвращает созданное представление
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,6 +46,12 @@ class MovieFragment : Fragment() {
         return binding.root
     }
 
+    /**
+     * On view created
+     * Этот метод вызывается сразу после установки представления
+     * @param view - представление полученное из метода onCreateView
+     * @param savedInstanceState - объект, необходимый для сохранения состояний
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.movieToolbar.setNavigationOnClickListener {
@@ -54,6 +68,10 @@ class MovieFragment : Fragment() {
                     movieRate.text = getString(R.string.movie_rate) + " " +
                             movieSnapShot.getString(KEY_MOVIE_RATE)
                     description.text = movieSnapShot.getString(KEY_MOVIE_DESCRIPTION)
+                    addReviewButton.setOnClickListener {
+                        val action = MovieFragmentDirections.actionMovieFragmentToReviewAddFragment(args.movieName)
+                        findNavController().navigate(action)
+                    }
                 }
                 Glide.with(this)
                     .load(movieSnapShot.getString(KEY_MOVIE_POSTER))
